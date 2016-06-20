@@ -16,7 +16,7 @@ $ npm i node-dotenv
 
 const dotEnv = require('node-dotenv')(); //It's enough
 
-// const path = require('path');
+// or with an explicit file path
 dotEnv = require('node-dotenv')('../file/path/to/.env'); //It's enough
 
 //if you want get all vars from .env
