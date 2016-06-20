@@ -1,7 +1,7 @@
 {
   "name": "node-dotenv",
   "version": "1.1.0",
-  "description": "nodejs envirinment variables configurator",
+  "description": "nodejs environment variables configurator",
   "main": "./lib/dotEnv.js",
   "directories": {
     "lib": "./lib"
