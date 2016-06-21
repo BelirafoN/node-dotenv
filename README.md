@@ -21,9 +21,18 @@ dotEnv = require('node-dotenv')('../file/path/to/.env'); //It's enough
 
 //if you want get all vars from .env
 dotEnv.then(envVars => console.log(envVars));
-```
+``` 
 
-Example `.env`-file structure:
+## File path to `.env` 
+
+`.env`-file search stage (places): 
+
+1. parameter passed in the call module;
+2. value from environment variable `NODE_DOT_ENV_PATH`;
+3. in root directory of your project;
+4. as a result of call `dirname(require.main.filename)`.
+ 
+## Example `.env`-file structure:
 
 ```
 varName1=varVal1
@@ -46,15 +55,6 @@ varName3=varVal3
 ``` 
 
 String started with `#` will not be parse.
-
-## File path to `.env` 
-
-`.env`-file search stage: 
-
-1. parameter passed in the call module;
-2. value from environment variable `NODE_DOT_ENV_PATH`;
-3. in root directory of project;
-4. `dirname(require.main.filename)`.
 
 ## License
 
